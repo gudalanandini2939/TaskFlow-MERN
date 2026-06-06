@@ -31,11 +31,23 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 204, 0, 0.18), transparent 25%),
-    radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.22), transparent 25%),
-    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.08), transparent 22%),
-    linear-gradient(135deg, #050816, #0f172a, #111827);
-  animation: bgGlow 7s ease-in-out infinite alternate;
+    radial-gradient(circle at 10% 20%, rgba(250, 204, 21, 0.28), transparent 18%),
+    radial-gradient(circle at 85% 25%, rgba(37, 99, 235, 0.35), transparent 22%),
+    radial-gradient(circle at 70% 80%, rgba(250, 204, 21, 0.22), transparent 18%),
+    linear-gradient(135deg, #020617, #0f172a, #172554);
+  animation: bgGlow 6s ease-in-out infinite alternate;
+}
+
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #facc15 2px, transparent 3px),
+    radial-gradient(circle, #60a5fa 2px, transparent 3px);
+  background-size: 220px 220px, 300px 300px;
+  background-position: 40px 70px, 160px 120px;
+  opacity: 0.7;
 }
 
 /* main box */
@@ -47,11 +59,11 @@ body {
   backdrop-filter: blur(20px);
   border-radius: 28px;
   overflow: hidden;
-  border: 2px solid rgba(255, 204, 0, 0.18);
+  border: 2px solid rgba(250, 204, 21, 0.35);
   box-shadow:
-    0 0 20px rgba(255, 204, 0, 0.12),
-    0 0 45px rgba(59, 130, 246, 0.18),
-    0 25px 70px rgba(0, 0, 0, 0.65);
+  0 0 25px rgba(250, 204, 21, 0.35),
+  0 0 70px rgba(37, 99, 235, 0.35),
+  0 30px 90px rgba(0, 0, 0, 0.75);
 }
 
 /* form */
