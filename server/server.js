@@ -14,18 +14,7 @@ connectDB();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://task-flow-mern-one.vercel.app",
-      "https://task-flow-mern-42s5nxbmz-gudalanandini.vercel.app",
-      "https://task-flow-mern-hj19xan3z-gudalanandini.vercel.app",
-      "https://task-flow-mern-k20ddtczk-gudalanandini.vercel.app"
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
