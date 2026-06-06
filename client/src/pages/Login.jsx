@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_AUTH_URL = "http://localhost:5000/api/auth";
-
+const API_AUTH_URL = "https://taskflow-mern-qrle.onrender.com/auth";
 function Login() {
   const [active, setActive] = useState(false);
 

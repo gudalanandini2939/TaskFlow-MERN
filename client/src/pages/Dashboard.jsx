@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "../dashboard.css";
 
 const API_URL = "https://taskflow-mern-qrle.onrender.com/tasks";
-
 function Dashboard() {
   const [tasks, setTasks] = useState([]);
 
