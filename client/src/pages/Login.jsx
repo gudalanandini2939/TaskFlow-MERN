@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API_AUTH_URL = "https://taskflow-mern-qrle.onrender.com/api/auth";
+
 function Login() {
   const [active, setActive] = useState(false);
 
@@ -17,6 +18,9 @@ function Login() {
   const [loginMessage, setLoginMessage] = useState("");
   const [registerMessage, setRegisterMessage] = useState("");
 
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [registerLoading, setRegisterLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -28,6 +32,8 @@ function Login() {
     }
 
     try {
+      setLoginLoading(true);
+
       const response = await fetch(`${API_AUTH_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -47,6 +53,8 @@ function Login() {
       navigate("/dashboard");
     } catch (error) {
       setLoginMessage("Server not connected");
+    } finally {
+      setLoginLoading(false);
     }
   };
 
@@ -59,6 +67,8 @@ function Login() {
     }
 
     try {
+      setRegisterLoading(true);
+
       const response = await fetch(`${API_AUTH_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -82,6 +92,8 @@ function Login() {
       navigate("/dashboard");
     } catch (error) {
       setRegisterMessage("Server not connected");
+    } finally {
+      setRegisterLoading(false);
     }
   };
 
@@ -120,8 +132,13 @@ function Login() {
 
           <p className="message">{loginMessage}</p>
 
-          <button type="button" className="login-btn" onClick={handleLogin}>
-            Sign In
+          <button
+            type="button"
+            className="login-btn"
+            onClick={handleLogin}
+            disabled={loginLoading}
+          >
+            {loginLoading ? "Signing In..." : "Sign In"}
           </button>
         </div>
 
@@ -152,9 +169,7 @@ function Login() {
 
             <button
               type="button"
-              onClick={() =>
-                setShowRegisterPassword(!showRegisterPassword)
-              }
+              onClick={() => setShowRegisterPassword(!showRegisterPassword)}
             >
               {showRegisterPassword ? "🙈" : "👁️"}
             </button>
@@ -162,8 +177,13 @@ function Login() {
 
           <p className="message">{registerMessage}</p>
 
-          <button type="button" className="login-btn" onClick={handleRegister}>
-            Create Account
+          <button
+            type="button"
+            className="login-btn"
+            onClick={handleRegister}
+            disabled={registerLoading}
+          >
+            {registerLoading ? "Creating..." : "Create Account"}
           </button>
         </div>
 
