@@ -26,7 +26,6 @@ body {
   align-items: center;
 }
 
-/* glowing animated background */
 .animated-bg {
   position: fixed;
   inset: 0;
@@ -50,7 +49,6 @@ body {
   opacity: 0.7;
 }
 
-/* main box */
 .auth-card {
   position: relative;
   width: 850px;
@@ -61,12 +59,11 @@ body {
   overflow: hidden;
   border: 2px solid rgba(250, 204, 21, 0.35);
   box-shadow:
-  0 0 25px rgba(250, 204, 21, 0.35),
-  0 0 70px rgba(37, 99, 235, 0.35),
-  0 30px 90px rgba(0, 0, 0, 0.75);
+    0 0 25px rgba(250, 204, 21, 0.35),
+    0 0 70px rgba(37, 99, 235, 0.35),
+    0 30px 90px rgba(0, 0, 0, 0.75);
 }
 
-/* form */
 .form-box {
   position: absolute;
   right: 0;
@@ -128,7 +125,6 @@ body {
   font-weight: 700;
 }
 
-/* button */
 .login-btn {
   height: 48px;
   border: none;
@@ -148,7 +144,6 @@ body {
   transform: translateY(-4px) scale(1.02);
 }
 
-/* register hidden first */
 .form-box.register {
   left: 0;
   opacity: 0;
@@ -165,7 +160,6 @@ body {
   pointer-events: none;
 }
 
-/* sliding panel */
 .toggle-box {
   position: absolute;
   left: 0;
@@ -242,7 +236,6 @@ body {
   pointer-events: all;
 }
 
-/* password eye icon */
 .password-box {
   position: relative;
   width: 100%;
@@ -286,29 +279,110 @@ body {
   }
 }
 
+/* MOBILE FIX - keeps same style, but rectangle and centered */
 @media (max-width: 500px) {
-  .auth-card {
-    width: 90%;
-    height: 650px;
+  .auth-page {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
   }
 
-  .form-box {
-    width: 100%;
-    height: 55%;
-    bottom: 0;
-    right: 0;
-    padding: 35px;
+  .auth-card {
+    width: 95%;
+    max-width: 360px;
+    height: 430px;
+    border-radius: 24px;
   }
 
   .toggle-box {
-    width: 100%;
-    height: 45%;
-    border-radius: 0 0 80px 80px;
+    width: 45%;
+    height: 100%;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
   }
 
   .auth-card.active .toggle-box {
+    left: 55%;
+    border-radius: 90px 0 0 90px;
+  }
+
+  .form-box {
+    width: 55%;
+    height: 100%;
+    padding: 22px 16px;
+    right: 0;
+  }
+
+  .form-box.register {
     left: 0;
-    top: 55%;
-    border-radius: 80px 80px 0 0;
+    width: 55%;
+  }
+
+  .form-box h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .form-box input {
+    height: 38px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 0 12px;
+  }
+
+  .password-box {
+    margin-bottom: 12px;
+  }
+
+  .password-box input {
+    padding-right: 35px;
+  }
+
+  .password-box button {
+    right: 10px;
+    font-size: 15px;
+  }
+
+  .form-box a {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .message {
+    font-size: 11px;
+    margin-bottom: 8px;
+    min-height: 15px;
+  }
+
+  .login-btn {
+    height: 38px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .toggle-panel {
+    padding: 18px 10px;
+    gap: 8px;
+  }
+
+  .toggle-panel h1 {
+    font-size: 19px;
+    max-width: 130px;
+    line-height: 1.2;
+  }
+
+  .toggle-panel p {
+    font-size: 10px;
+    max-width: 130px;
+    line-height: 1.4;
+  }
+
+  .outline-btn {
+    width: 110px;
+    height: 32px;
+    font-size: 11px;
+    border-radius: 10px;
   }
 }
