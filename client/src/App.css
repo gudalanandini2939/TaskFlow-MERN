@@ -282,175 +282,103 @@ body {
 /* MOBILE FIX - keeps same style, but rectangle and centered */
 @media (max-width: 500px) {
   .auth-page {
-    min-height: 100vh;
+    padding: 20px 0;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
   }
 
   .auth-card {
-    width: 95%;
-    max-width: 360px;
-    height: 430px;
-    border-radius: 24px;
+    width: 92%;
+    max-width: 380px;
+    height: 650px;
+    border-radius: 26px;
   }
 
   .toggle-box {
-    width: 45%;
-    height: 100%;
-    border-top-right-radius: 90px;
-    border-bottom-right-radius: 90px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36%;
+    border-radius: 0 0 70px 70px;
   }
 
   .auth-card.active .toggle-box {
-    left: 55%;
-    border-radius: 90px 0 0 90px;
-  }
-
-  .form-box {
-    width: 55%;
-    height: 100%;
-    padding: 22px 16px;
-    right: 0;
-  }
-
-  .form-box.register {
+    top: 64%;
     left: 0;
-    width: 55%;
-  }
-
-  .form-box h2 {
-    font-size: 26px;
-    margin-bottom: 18px;
-  }
-
-  .form-box input {
-    height: 38px;
-    font-size: 13px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    padding: 0 12px;
-  }
-
-  .password-box {
-    margin-bottom: 12px;
-  }
-
-  .password-box input {
-    padding-right: 35px;
-  }
-
-  .password-box button {
-    right: 10px;
-    font-size: 15px;
-  }
-
-  .form-box a {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-
-  .message {
-    font-size: 11px;
-    margin-bottom: 8px;
-    min-height: 15px;
-  }
-
-  .login-btn {
-    height: 38px;
-    font-size: 13px;
-    border-radius: 10px;
+    width: 100%;
+    height: 36%;
+    border-radius: 70px 70px 0 0;
   }
 
   .toggle-panel {
-    padding: 18px 10px;
-    gap: 8px;
+    padding: 22px;
+    gap: 10px;
   }
 
   .toggle-panel h1 {
-    font-size: 19px;
-    max-width: 130px;
-    line-height: 1.2;
+    font-size: 30px;
+    max-width: 300px;
   }
 
   .toggle-panel p {
-    font-size: 10px;
-    max-width: 130px;
+    font-size: 14px;
+    max-width: 280px;
     line-height: 1.4;
   }
 
   .outline-btn {
-    width: 110px;
-    height: 32px;
-    font-size: 11px;
-    border-radius: 10px;
-  }
-}
-
-@media (max-width: 500px) {
-  .auth-page {
-    padding: 20px 10px;
-    align-items: center;
-  }
-
-  .auth-card {
-    width: 95%;
-    max-width: 370px;
-    height: 430px;
-    border-radius: 24px;
-  }
-
-  .toggle-box {
-    width: 45%;
-    height: 100%;
-    border-top-right-radius: 90px;
-    border-bottom-right-radius: 90px;
-  }
-
-  .auth-card.active .toggle-box {
-    left: 55%;
-    border-radius: 90px 0 0 90px;
+    width: 180px;
+    height: 42px;
+    font-size: 14px;
   }
 
   .form-box {
-    width: 55%;
-    height: 100%;
-    padding: 20px 15px;
+    top: 36%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 64%;
+    padding: 28px;
+  }
+
+  .form-box.register {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64%;
+  }
+
+  .auth-card.active .form-box.login {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .auth-card.active .form-box.register {
+    opacity: 1;
+    pointer-events: all;
   }
 
   .form-box h2 {
-    font-size: 25px;
-    margin-bottom: 18px;
+    font-size: 36px;
+    margin-bottom: 24px;
   }
 
   .form-box input {
-    height: 38px;
-    font-size: 13px;
-    margin-bottom: 12px;
+    height: 50px;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .password-box {
+    margin-bottom: 16px;
+  }
+
+  .form-box a {
+    font-size: 14px;
+    margin-bottom: 18px;
   }
 
   .login-btn {
-    height: 38px;
-    font-size: 13px;
-  }
-
-  .toggle-panel {
-    padding: 16px 8px;
-  }
-
-  .toggle-panel h1 {
-    font-size: 18px;
-    max-width: 130px;
-  }
-
-  .toggle-panel p {
-    font-size: 10px;
-    max-width: 130px;
-  }
-
-  .outline-btn {
-    width: 110px;
-    height: 32px;
-    font-size: 11px;
+    height: 50px;
+    font-size: 16px;
   }
 }
