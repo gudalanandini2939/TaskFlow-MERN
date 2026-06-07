@@ -386,3 +386,71 @@ body {
     border-radius: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .auth-page {
+    padding: 20px 10px;
+    align-items: center;
+  }
+
+  .auth-card {
+    width: 95%;
+    max-width: 370px;
+    height: 430px;
+    border-radius: 24px;
+  }
+
+  .toggle-box {
+    width: 45%;
+    height: 100%;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+  }
+
+  .auth-card.active .toggle-box {
+    left: 55%;
+    border-radius: 90px 0 0 90px;
+  }
+
+  .form-box {
+    width: 55%;
+    height: 100%;
+    padding: 20px 15px;
+  }
+
+  .form-box h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+
+  .form-box input {
+    height: 38px;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .login-btn {
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .toggle-panel {
+    padding: 16px 8px;
+  }
+
+  .toggle-panel h1 {
+    font-size: 18px;
+    max-width: 130px;
+  }
+
+  .toggle-panel p {
+    font-size: 10px;
+    max-width: 130px;
+  }
+
+  .outline-btn {
+    width: 110px;
+    height: 32px;
+    font-size: 11px;
+  }
+}
